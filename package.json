@@ -1,6 +1,6 @@
 {
   "name": "swagger-schema-extractor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Extract schemas from Swagger",
   "main": "bin/cli.js",
   "scripts": {
