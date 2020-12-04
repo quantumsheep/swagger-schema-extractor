@@ -42,6 +42,8 @@ async function main() {
   const schemas = Object.keys(data.components.schemas).map(key => {
     const schema = data.components.schemas[key];
 
+    console.log(schema)
+
     if (schema.type === 'object') {
       let str = `class ${key} {\n`;
 
@@ -61,14 +63,10 @@ async function main() {
 
       return str;
     } else if (schema.enum) {
-      let str = `enum ${key} {\n`;
-
       const type = get_type(schema);
-      const values = schema.enum.map(value => `  ${convert_value(type, value)},`);
+      const values = schema.enum.map(value => convert_value(type, value));
 
-      str += values.join('\n');
-      str += '\n}\n';
-
+      let str = `type ${key} = ${values.join(' | ')};\n`;
       return str;
     }
   });
