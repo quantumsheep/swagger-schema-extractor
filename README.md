@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/swagger-schema-extractor)](https://www.npmjs.com/package/swagger-schema-extractor)
+
 # Swagger Schema Extractor
 Extract OpenAPI schemas into TypeScript types.
 
