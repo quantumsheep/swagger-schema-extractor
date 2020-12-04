@@ -1,0 +1,33 @@
+{
+  "name": "swagger-schema-extractor",
+  "version": "1.0.0",
+  "description": "Extract schemas from Swagger",
+  "main": "bin/cli.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "bin": {
+    "swagger-schema-extractor": "bin/cli.js"
+  },
+  "contributors": [
+    {
+      "name": "Nathanael Demacon",
+      "email": "nathanael.dmc@outlook.fr"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/quantumsheep/swagger-schema-extractor.git"
+  },
+  "keywords": [
+    "swagger",
+    "openapi",
+    "typescript",
+    "ts"
+  ],
+  "author": "Nathanael Demacon <nathanael.dmc@outlook.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
