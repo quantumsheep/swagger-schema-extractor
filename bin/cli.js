@@ -39,8 +39,10 @@ async function main() {
 
   const { data } = await axios(url);
 
-  const schemas = Object.keys(data.components.schemas).map(key => {
-    const schema = data.components.schemas[key];
+  const schemas = data.components ? data.components.schemas : data.definitions;
+
+  const types = Object.keys(schemas).map(key => {
+    const schema = schemas[key];
 
     if (schema.type === 'object') {
       let str = `class ${key} {\n`;
@@ -69,7 +71,7 @@ async function main() {
     }
   });
 
-  console.log(schemas.join('\n'));
+  console.log(types.join('\n'));
 }
 
 main();
