@@ -10,4 +10,6 @@ npx swagger-schema-extractor http://localhost:3000/openapi.json > types.ts
 ```
 
 ### OpenAPI v2
+```bash
 npx swagger-schema-extractor http://localhost:3000/v2/swagger.json > types.ts
+```
